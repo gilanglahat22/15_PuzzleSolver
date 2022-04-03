@@ -168,7 +168,7 @@ def Details():
             INFO += "Value KURANG(" + str(i) + ") "  +": " + str(Tempkurang[i]) + "\n"
         else:
             INFO += "Value KURANG(" + str(i) + ") "  +": " + str(Tempkurang[0]) + "\n"
-    INFO += "The Numbers of kurang function : " + str(ValuekurangSum) + "\n"
+    INFO += "Sum of KURANG(i) : " + str(ValuekurangSum) + "\n"
     INFO += "Nodes Generates : " + str(total) + "\n"
     INFO += "Time Execution : "+str(duration*1000)+" ms\n" 
     showinfo(title='Details Solution', message=INFO)
