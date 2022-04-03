@@ -15,11 +15,11 @@ class Puzzle:
     Solution = [] 
     # Direction to move : DOWN, RIGHT, UP, LEFT
     Direction = [(1,0),(0,1),(-1,0),(0,-1)] 
-    # Fungsi kurang tiap entri
+    # Kurang Function for each entry
     Tempkurang = [0 for i in range(16)]
     # List of visited node
     visited = []
-    # Nilai X
+    # Value X
     ValueX = 0
     # Total
     Total = 0
@@ -88,11 +88,12 @@ class Puzzle:
                     return (i,j)
         return (-1,-1)
     
-    # Useing Branch and Bound Algorithm to solve the puzzle
+    # Using Branch and Bound Algorithm to solve the puzzle
     def solve(self): 
         kurang = self.SumKurang()
         if kurang%2==0:
-            heap = [] # current total cost, depth, puzzle, moves to puzzle
+            # temp current total cost, depth, puzzle, moves to puzzle
+            heap = []
             cost = self.SumCost(self.puzzle)
             pq.heappush(heap,(cost,0,copy.deepcopy(self.puzzle),[]))
 
@@ -100,23 +101,24 @@ class Puzzle:
                 curCost, depth, curPuzzle, path = pq.heappop(heap)
                 self.visited.append(curPuzzle)
                 self.total += 1
-                if (curCost>self.mincost): # Bound
-                    continue
-                if (curCost == depth): # Solution found
-                    if (curCost<self.mincost):
-                        self.mincost = curCost
-                        self.Solution = path
-                    continue
-                
-                # Transitions
-                x0,y0 = self.getZeroPos(curPuzzle)
-                for dx,dy in self.Direction:
-                    if (0<=x0+dx<4 and 0<=y0+dy<4): # If the coordinat not valid
-                        newPuzzle = copy.deepcopy(curPuzzle)
-                        newPuzzle[x0][y0], newPuzzle[x0+dx][y0+dy] = newPuzzle[x0+dx][y0+dy], newPuzzle[x0][y0]
-                        newPath = copy.deepcopy(path)
-                        newPath.append((dx,dy))
-                        cost = self.SumCost(newPuzzle)
-                        if (not newPuzzle in self.visited):
-                            pq.heappush(heap,(cost+depth+1, depth+1, newPuzzle, newPath))
+                if (curCost<=self.mincost and curCost != depth):
+                    # Transitions
+                    x0,y0 = self.getZeroPos(curPuzzle)
+                    for dx,dy in self.Direction:
+                        if (0<=x0+dx<4 and 0<=y0+dy<4): # If the coordinat not valid
+                            newPuzzle = copy.deepcopy(curPuzzle)
+                            newPuzzle[x0][y0], newPuzzle[x0+dx][y0+dy] = newPuzzle[x0+dx][y0+dy], newPuzzle[x0][y0]
+                            newPath = copy.deepcopy(path)
+                            newPath.append((dx,dy))
+                            cost = self.SumCost(newPuzzle)
+                            if (not newPuzzle in self.visited):
+                                pq.heappush(heap,(cost+depth+1, depth+1, newPuzzle, newPath))
+                else:
+                    if (curCost>self.mincost): # Bound
+                        continue
+                    if (curCost == depth): # Solution found
+                        if (curCost<self.mincost):
+                            self.mincost = curCost
+                            self.Solution = path
+                        continue
         return kurang
