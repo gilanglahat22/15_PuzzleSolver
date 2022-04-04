@@ -1,9 +1,9 @@
 # Tugas Kecil 3 IF2211 Strategi Algoritma : Penyelesaian 15 Puzzle dengan Algoritma Branch and Bound
 
 # Author 
-Nama  : Muhammad Gilang Ramadhan
-NIM   : 13520137
-Email : gilanglahat22@gmail.com 
+### Nama  : Muhammad Gilang Ramadhan
+### NIM   : 13520137
+### Email : gilanglahat22@gmail.com 
 
 ## 15-Puzzle
 15-Puzzle adalah salah satu permainan dengan menggunakan papan yang berisikan angka 1 sampai 15 dalam 16 bagian ubin. Terdapat satu ubin kosong yang dapat digerakkan ke atas, bawah, kiri, dan kanan untuk menggeser ubin lainnya. Tujuan yang dicapai dari permainan ini adalah menyusun angka 1 sampai 15 terurut dari atas ke bawah dengan cara menggeser ubin kosong. 
