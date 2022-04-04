@@ -16,7 +16,7 @@ Algoritma Branch and Bound merupakan salah satu strategi algoritma yang dipakai 
 Pertama-tama clone repository ini di local repository Anda dengan cara menjalankan perintah berikut
 
 ```
-  `git clone https://github.com/gilanglahat22/Tucil3_13520137.git`
+  git clone https://github.com/gilanglahat22/Tucil3_13520137.git
 ```
 Setelah itu, anda bisa menjalankan programnya pada directory utama dari repositorynya dengan menjalankan perintah sebagai berikut di terminal Anda.
 
@@ -34,5 +34,9 @@ Atau jika anda menggunakan vscode (pastikan anda juga menginstall exstentionnya 
     Adapun cara untuk mengerun file python di vscode dapat anda ikuti seperti tutorial pada link berikut ini : https://code.visualstudio.com/docs/python/python-tutorial
     
 ## Aturan pada file inputan
-
+File inputan memiliki aturan sebagai berikut.
+1. Isi file terdiri dari tepat 4 baris
+2. Tiap baris terdiri dari tepat 4 bilangan yang dipisahkan oleh spasi
+3. Bilangan yang terdapat di inputan tersebut merupakan permutasi dari 0..15
+4. Untuk sel kosong yang terdapat dalam puzzle tersebut direpresentasikan dengan angka 0 pada file inputan
     
