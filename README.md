@@ -39,7 +39,7 @@ Atau jika anda menggunakan vscode (pastikan anda juga menginstall exstentionnya 
     Adapun cara untuk mengerun file python di vscode dapat anda ikuti seperti tutorial pada link berikut ini : https://code.visualstudio.com/docs/python/python-tutorial
 
 ## Cara penggunaan Interface
-Program yang dibuat menggunakan interface berbasis GUI yang mana inputannya dilakukan langsung di GUI-nya. Sementara itu untuk outputnya, anda bisa mendapatkannya langsung di GUI-nya atau bisa dengan mengexport file .txt yang mana akan menghasilkan step penyelesaian dari problem puzzle yang diberikan. Sementara itu, di dalam GUI tersebut memiliki berbagai button yang memiliki fungsinya masing-masing. Adapun rincian button tersebut adalah sebagai berikut.
+Program yang dibuat menggunakan interface berbasis GUI yang mana inputannya dilakukan langsung di GUI-nya. Untuk outputnya, anda bisa mendapatkannya langsung di GUI-nya atau bisa dengan mengexport file .txt yang mana akan menghasilkan step penyelesaian dari problem puzzle yang diberikan. Sementara itu, di dalam GUI tersebut memiliki berbagai button yang memiliki fungsinya masing-masing. Adapun rincian button tersebut adalah sebagai berikut.
 1. Select file : berfungsi untuk memilih file inputan .txt dari directory user
 2. Solve : berfungsi untuk mengarahkan user kepada solusi dari inputan yang diberikan user
 3. Export Solution : berfungsi untuk mengexport/mengesave step-step solusi
